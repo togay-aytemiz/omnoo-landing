@@ -167,6 +167,14 @@
 }
 
 /* Store Badges */
+.earlyAccessText {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+}
+
 .storeBadges {
     display: flex;
     gap: var(--spacing-sm);

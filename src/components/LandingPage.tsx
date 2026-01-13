@@ -88,6 +88,8 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                     </form>
                                 )}
 
+                                <p className={styles.earlyAccessText}>{dict.hero.earlyAccessFree}</p>
+
                                 {/* Store Badges */}
                                 <div className={styles.storeBadges}>
                                     <div className={styles.storeBadge}>
