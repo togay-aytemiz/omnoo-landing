@@ -145,8 +145,8 @@
 
     .contentWrapper {
         height: 100vh;
-        padding: var(--spacing-lg) var(--spacing-3xl);
-        /* Standard padding: Top/Bottom Side */
+        padding: 0 var(--spacing-3xl) var(--spacing-lg);
+        /* Zero top padding to pin header container */
         justify-content: flex-start;
         /* Start from top */
     }
