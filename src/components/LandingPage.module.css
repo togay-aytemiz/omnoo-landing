@@ -155,6 +155,9 @@
         margin-bottom: var(--spacing-lg);
         /* Reduce header margin */
         flex-shrink: 0;
+        width: 100%;
+        max-width: 50%;
+        /* Align with mainContent width */
     }
 
     .mainContent {
