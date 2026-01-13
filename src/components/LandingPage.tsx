@@ -51,16 +51,6 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                     <div className={styles.heroSection}>
                         {/* Left Column: Text Content */}
                         <div className={styles.textContent}>
-                            <div className={styles.mobileHeroImage}>
-                                <Image
-                                    src="/onboarding-samplemenu.png"
-                                    alt="Sample Menu Preview"
-                                    width={280}
-                                    height={280}
-                                    style={{ objectFit: 'contain' }}
-                                    priority
-                                />
-                            </div>
                             <h1 className={styles.headline}>
                                 <span className={styles.headlineLight}>{dict.hero.titleStart}</span>
                                 <br />
@@ -92,6 +82,17 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                     <span style={{ opacity: 0.5 }}>|</span>
                                     <span>{dict.hero.iosAndroid}</span>
                                 </div>
+                            </div>
+
+                            {/* Mobile App Preview - Below CTA */}
+                            <div className={styles.mobileAppPreview}>
+                                <Image
+                                    src="/Landing-page-mobile-home-asset.webp"
+                                    alt="Omnoo Mobile App Preview"
+                                    width={320}
+                                    height={640}
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                             </div>
 
                             {/* Features Grid */}

@@ -53,13 +53,17 @@
     text-align: center;
 }
 
-.mobileHeroImage {
-    margin-bottom: var(--spacing-md);
-    display: flex;
-    justify-content: center;
+max-width: 220px;
+/* Reduced size */
+}
+
+/* Mobile App Preview - shown on mobile, hidden on desktop */
+.mobileAppPreview {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
     width: 100%;
-    max-width: 220px;
-    /* Reduced size */
+    max-width: 340px;
+    align-self: center;
 }
 
 /* Hero Section - Column on mobile, row on desktop */
@@ -228,7 +232,7 @@
         text-align: left;
     }
 
-    .mobileHeroImage {
+    .mobileAppPreview {
         display: none;
     }
 
