@@ -196,12 +196,16 @@
         margin-left: 0;
         /* Reset margins */
         margin-right: 0;
+        max-width: 800px;
+        /* Wider for desktop (2 lines) */
     }
 
     .subheadline {
         margin-bottom: var(--spacing-lg);
         margin-left: 0;
         margin-right: 0;
+        max-width: 600px;
+        /* Wider for desktop (2 lines) */
     }
 
     .formContainer {
