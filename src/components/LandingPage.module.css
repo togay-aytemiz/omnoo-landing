@@ -53,10 +53,6 @@
     text-align: center;
 }
 
-max-width: 220px;
-/* Reduced size */
-}
-
 /* Mobile App Preview - shown on mobile, hidden on desktop */
 .mobileAppPreview {
     margin-top: var(--spacing-xl);
