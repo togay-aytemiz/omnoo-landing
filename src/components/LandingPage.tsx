@@ -141,7 +141,6 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                             </div>
                         </div>
                     </div>
-                    <p className={styles.copyright}>© {new Date().getFullYear()} Omnoo.</p>
                 </footer>
             </div>
         </div>
