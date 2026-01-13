@@ -52,6 +52,15 @@
     text-align: center;
 }
 
+.mobileHeroImage {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 280px;
+    /* Constrain size */
+    margin-bottom: var(--spacing-md);
+}
+
 .headline {
     font-family: var(--font-display);
     font-weight: 700;
@@ -239,5 +248,9 @@
     .featureCard {
         padding: var(--spacing-md);
         /* Smaller padding in cards */
+    }
+
+    .mobileHeroImage {
+        display: none;
     }
 }

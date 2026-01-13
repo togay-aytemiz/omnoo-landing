@@ -48,6 +48,14 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                 </div>
 
                 <main className={styles.mainContent}>
+                    <Image
+                        src="/onboarding-samplemenu.png"
+                        alt="Sample Menu"
+                        width={373}
+                        height={364}
+                        className={styles.mobileHeroImage}
+                        priority
+                    />
                     <h1 className={styles.headline}>
                         <span className={styles.headlineLight}>{dict.hero.titleStart}</span>
                         <br />
