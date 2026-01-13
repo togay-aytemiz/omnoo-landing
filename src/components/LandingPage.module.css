@@ -223,7 +223,7 @@
 
     .textContent {
         flex: 1;
-        max-width: 600px;
+        max-width: 750px;
         align-items: flex-start;
         text-align: left;
     }
