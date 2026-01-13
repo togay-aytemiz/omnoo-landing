@@ -46,55 +46,19 @@
     margin-top: var(--spacing-xl);
     /* Standard spacing */
     margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-3xl);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.heroWidget {
-    position: relative;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 244, 230, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 40px;
-    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-    box-shadow:
-        0 20px 40px -10px rgba(0, 0, 0, 0.08),
-        inset 0 0 20px rgba(255, 255, 255, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 280px;
-    width: 100%;
-}
-
-.mascotLabel {
-    position: absolute;
-    top: 16px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    z-index: 2;
-}
-
 .mobileHeroImage {
-    display: block;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-    /* Add depth to the character itself */
+    max-width: 300px;
 }
 
 .headline {
@@ -242,6 +206,10 @@
         text-align: left;
     }
 
+    .mobileHeroImage {
+        display: none;
+    }
+
     .headline {
         font-size: clamp(36px, 3.5vw, 64px);
         /* Slightly smaller max size */
@@ -284,10 +252,5 @@
     .featureCard {
         padding: var(--spacing-md);
         /* Smaller padding in cards */
-    }
-
-    .heroWidget,
-    .mobileHeroImage {
-        display: none;
     }
 }

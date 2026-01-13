@@ -48,17 +48,13 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                 </div>
 
                 <main className={styles.mainContent}>
-                    <div className={styles.heroWidget}>
-                        <div className={styles.mascotLabel}>
-                            <span>✨</span>
-                            <span>{lang === 'tr' ? 'Kişisel Şefiniz' : 'Your Personal Chef'}</span>
-                        </div>
+                    <div className={styles.mobileHeroImage}>
                         <Image
                             src="/onboarding-samplemenu.png"
-                            alt="Sample Menu"
-                            width={373}
-                            height={364}
-                            className={styles.mobileHeroImage}
+                            alt="Sample Menu Preview"
+                            width={280}
+                            height={280}
+                            style={{ objectFit: 'contain' }}
                             priority
                         />
                     </div>
