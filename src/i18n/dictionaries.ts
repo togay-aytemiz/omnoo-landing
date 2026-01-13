@@ -7,7 +7,7 @@ export const tr = {
     hero: {
         titleStart: "Yemek Planlamanın En",
         titleEnd: "Eğlenceli Hali",
-        subtitle: "Damak tadınıza, ofis ve spor rutininize uygun; alışverişten pişirmeye her adımı optimize eden kişisel şefiniz Omnoo ile haftalık planınızı otomatiğe alın.",
+        subtitle: "Türk damak tadına uygun, ofis ve spor rutinine göre şekillenen akıllı menüler. Bir pişir iki ye mantığıyla hem zamandan hem bütçeden kazan.",
         emailPlaceholder: "E-posta adresiniz",
         joinButton: "Bekleme Listesine Katıl — Erken Erişim",
         launchText: "İlk kullanıcılar için ücretsiz erken erişim",
