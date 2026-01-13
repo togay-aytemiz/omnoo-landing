@@ -223,7 +223,7 @@
 
     .textContent {
         flex: 1;
-        max-width: 550px;
+        max-width: 600px;
         align-items: flex-start;
         text-align: left;
     }
@@ -240,8 +240,8 @@
     }
 
     .appPreview {
-        max-width: 380px;
-        /* Large phone mockup */
+        max-width: 500px;
+        /* Much larger phone mockup */
     }
 
     .headline {
@@ -260,7 +260,7 @@
     }
 
     .formContainer {
-        margin-bottom: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
         margin-left: 0;
         margin-right: 0;
         max-width: 360px;
@@ -271,7 +271,13 @@
     }
 
     .featuresGrid {
-        display: none;
-        /* Hide features on desktop per reference */
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-lg);
+        max-width: 100%;
+    }
+
+    .featureCard {
+        padding: var(--spacing-sm);
     }
 }

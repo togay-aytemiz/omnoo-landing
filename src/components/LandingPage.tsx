@@ -93,6 +93,30 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                     <span>{dict.hero.iosAndroid}</span>
                                 </div>
                             </div>
+
+                            {/* Features Grid */}
+                            <div className={styles.featuresGrid}>
+                                <FeatureCard
+                                    icon="✨"
+                                    title={dict.features.personalized.title}
+                                    desc={dict.features.personalized.desc}
+                                />
+                                <FeatureCard
+                                    icon="🍽️"
+                                    title={dict.features.cuisines.title}
+                                    desc={dict.features.cuisines.desc}
+                                />
+                                <FeatureCard
+                                    icon="⚡"
+                                    title={dict.features.cookSmart.title}
+                                    desc={dict.features.cookSmart.desc}
+                                />
+                                <FeatureCard
+                                    icon="🛒"
+                                    title={dict.features.grocery.title}
+                                    desc={dict.features.grocery.desc}
+                                />
+                            </div>
                         </div>
 
                         {/* Right Column: Phone Mockup */}
@@ -101,37 +125,13 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                 <Image
                                     src="/Landing-page-mobile-home-asset.webp"
                                     alt="Omnoo Mobile App Preview"
-                                    width={400}
-                                    height={800}
+                                    width={500}
+                                    height={1000}
                                     style={{ width: '100%', height: 'auto' }}
                                     priority
                                 />
                             </div>
                         </div>
-                    </div>
-
-                    {/* Features Grid - Mobile Only */}
-                    <div className={styles.featuresGrid}>
-                        <FeatureCard
-                            icon="✨"
-                            title={dict.features.personalized.title}
-                            desc={dict.features.personalized.desc}
-                        />
-                        <FeatureCard
-                            icon="🍽️"
-                            title={dict.features.cuisines.title}
-                            desc={dict.features.cuisines.desc}
-                        />
-                        <FeatureCard
-                            icon="⚡"
-                            title={dict.features.cookSmart.title}
-                            desc={dict.features.cookSmart.desc}
-                        />
-                        <FeatureCard
-                            icon="🛒"
-                            title={dict.features.grocery.title}
-                            desc={dict.features.grocery.desc}
-                        />
                     </div>
                 </main>
 
