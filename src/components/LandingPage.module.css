@@ -33,7 +33,8 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    /* Reduced top padding for mobile */
     display: flex;
     flex-direction: column;
     flex: 1;
