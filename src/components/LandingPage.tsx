@@ -32,7 +32,7 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
             {/* Background Layer */}
             <div className={styles.heroBackground}>
                 <Image
-                    src="/hero-bg.jpg"
+                    src="/desktop-lp.webp"
                     alt="Omnoo App Preview"
                     fill
                     className={styles.backgroundImage}
