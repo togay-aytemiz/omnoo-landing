@@ -93,6 +93,11 @@
     width: 100%;
 }
 
+/* Desktop Store Badges - hidden on mobile, shown below phone on desktop */
+.desktopStoreBadges {
+    display: none;
+}
+
 .headline {
     font-family: var(--font-display);
     font-weight: 700;
@@ -385,14 +390,21 @@
 
     .visualContent {
         display: flex;
+        flex-direction: column;
         flex: 1;
         justify-content: center;
         align-items: center;
+        gap: var(--spacing-lg);
     }
 
     .appPreview {
         max-width: 500px;
         /* Much larger phone mockup */
+    }
+
+    .desktopStoreBadges {
+        display: flex;
+        gap: var(--spacing-sm);
     }
 
     .headline {
