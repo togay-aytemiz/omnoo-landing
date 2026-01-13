@@ -145,8 +145,8 @@
 
     .contentWrapper {
         height: 100vh;
-        padding: var(--spacing-2xl) var(--spacing-3xl) var(--spacing-lg);
-        /* Restore top padding for breathing room */
+        padding: var(--spacing-lg) var(--spacing-3xl);
+        /* Standard padding: Top/Bottom Side */
         justify-content: flex-start;
         /* Start from top */
     }
