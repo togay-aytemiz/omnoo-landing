@@ -166,16 +166,55 @@
     gap: var(--spacing-md);
 }
 
-.launchText {
-    font-family: var(--font-body);
-    font-size: 13px;
-    color: var(--color-text-muted);
-    margin-top: var(--spacing-md);
+/* Store Badges */
+.storeBadges {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.storeBadge {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: var(--spacing-xs);
-    flex-wrap: wrap;
+    padding: 10px 16px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    color: white;
+    cursor: default;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.storeBadge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.storeIcon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.storeBadgeText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.storeComingSoon {
+    font-size: 10px;
+    font-family: var(--font-body);
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.storeName {
+    font-size: 16px;
+    font-family: var(--font-display);
+    font-weight: 600;
 }
 
 .featuresGrid {
@@ -299,10 +338,6 @@
         margin-left: 0;
         margin-right: 0;
         max-width: 360px;
-    }
-
-    .launchText {
-        justify-content: flex-start;
     }
 
     .featuresGrid {

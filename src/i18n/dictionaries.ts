@@ -16,8 +16,9 @@ export const tr = {
         ],
         emailPlaceholder: "E-posta adresiniz",
         joinButton: "Bekleme Listesine Katıl — Erken Erişim",
-        launchText: "İlk kullanıcılar için ücretsiz erken erişim",
-        iosAndroid: "Yakında iOS & Android'de",
+        comingSoon: "Yakında",
+        appStore: "App Store",
+        googlePlay: "Google Play",
     },
     features: {
         personalized: {
