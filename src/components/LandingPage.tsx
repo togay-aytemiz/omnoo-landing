@@ -58,6 +58,16 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                             </h1>
                             <p className={styles.subheadline}>{dict.hero.subtitle}</p>
 
+                            {/* Benefits Checklist */}
+                            <ul className={styles.benefitsList}>
+                                {dict.hero.benefits.map((benefit, index) => (
+                                    <li key={index} className={styles.benefitItem}>
+                                        <span className={styles.benefitCheck}>✓</span>
+                                        <span>{benefit}</span>
+                                    </li>
+                                ))}
+                            </ul>
+
                             <div className={styles.formContainer}>
                                 {submitted ? (
                                     <div style={{ padding: '24px', background: 'rgba(230, 255, 250, 0.8)', border: '1px solid rgba(0, 150, 136, 0.2)', borderRadius: '12px', color: '#00695c' }}>

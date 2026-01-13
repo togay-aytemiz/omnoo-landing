@@ -7,7 +7,13 @@ export const tr = {
     hero: {
         titleStart: "Yemek Planlamanın En",
         titleEnd: "Eğlenceli Hali",
-        subtitle: "Türk damak tadına uygun, ofis ve spor rutinine göre şekillenen akıllı menüler. Bir pişir iki ye mantığıyla hem zamandan hem bütçeden kazan.",
+        subtitle: "Türk damak tadına uygun, ofis ve spor rutinine göre şekillenen akıllı menüler.",
+        benefits: [
+            "Tamamen kişiye özel reçeteler",
+            "Bir pişir, iki ye mantığı",
+            "Benzer malzemeleri gruplama",
+            "Detaylı besin değerleri"
+        ],
         emailPlaceholder: "E-posta adresiniz",
         joinButton: "Bekleme Listesine Katıl — Erken Erişim",
         launchText: "İlk kullanıcılar için ücretsiz erken erişim",
