@@ -91,6 +91,17 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                         </div>
                     </div>
 
+                    {/* Mobile Home Asset Image */}
+                    <div className={styles.mobileAppPreview}>
+                        <Image
+                            src="/Landing-page-mobile-home-asset.webp"
+                            alt="Omnoo Mobile App Preview"
+                            width={320}
+                            height={600}
+                            style={{ width: '100%', height: 'auto', borderRadius: '24px' }}
+                        />
+                    </div>
+
                     <div className={styles.featuresGrid}>
                         <FeatureCard
                             icon="✨"

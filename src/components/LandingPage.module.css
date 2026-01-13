@@ -58,7 +58,16 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 220px;
+    /* Reduced size */
+}
+
+.mobileAppPreview {
+    margin-bottom: var(--spacing-2xl);
+    width: 100%;
+    max-width: 340px;
+    /* Limit width for better mobile view */
+    align-self: center;
 }
 
 .headline {
@@ -206,7 +215,8 @@
         text-align: left;
     }
 
-    .mobileHeroImage {
+    .mobileHeroImage,
+    .mobileAppPreview {
         display: none;
     }
 
