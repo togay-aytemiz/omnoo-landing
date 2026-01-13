@@ -197,16 +197,24 @@
         margin-left: 0;
         /* Reset margins */
         margin-right: 0;
-        max-width: 600px;
-        /* Constrain width to balance text across 2 lines */
+        max-width: 100%;
+        /* Let container dictate width since we use BR */
+    }
+
+    .headlineLight {
+        font-weight: 300;
+    }
+
+    .headlineBold {
+        font-weight: 700;
     }
 
     .subheadline {
         margin-bottom: var(--spacing-lg);
         margin-left: 0;
         margin-right: 0;
-        max-width: 100%;
-        /* Let container dictate width */
+        max-width: 550px;
+        /* Force 2-line wrap */
     }
 
     .formContainer {

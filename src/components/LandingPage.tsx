@@ -48,7 +48,11 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                 </div>
 
                 <main className={styles.mainContent}>
-                    <h1 className={styles.headline}>{dict.hero.title}</h1>
+                    <h1 className={styles.headline}>
+                        <span className={styles.headlineLight}>{dict.hero.titleStart}</span>
+                        <br />
+                        <span className={styles.headlineBold}>{dict.hero.titleEnd}</span>
+                    </h1>
                     <p className={styles.subheadline}>{dict.hero.subtitle}</p>
 
                     <div className={styles.formContainer}>

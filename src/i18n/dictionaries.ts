@@ -5,7 +5,8 @@ export const tr = {
         waitlist: "Bekleme Listesine Katıl",
     },
     hero: {
-        title: "Yemek Planlamanın En Eğlenceli Hali",
+        titleStart: "Yemek Planlamanın En",
+        titleEnd: "Eğlenceli Hali",
         subtitle: "Damak tadınıza, ofis ve spor rutininize uygun; alışverişten pişirmeye her adımı optimize eden kişisel şefiniz Omnoo ile haftalık planınızı otomatiğe alın.",
         emailPlaceholder: "E-posta adresiniz",
         joinButton: "Bekleme Listesine Katıl — Erken Erişim",
@@ -46,7 +47,8 @@ export const en = {
         waitlist: "Join Waitlist",
     },
     hero: {
-        title: "The Most Efficient Way to Plan Weekly Meals with AI",
+        titleStart: "The Most Efficient Way to",
+        titleEnd: "Plan Weekly Meals with AI",
         subtitle: "Automate your weekly plan with Omnoo, your personal chef that optimizes every step from shopping to cooking, tailored to your taste, office, and gym routine.",
         emailPlaceholder: "your@email.com",
         joinButton: "Join the Waitlist — Early Access",
