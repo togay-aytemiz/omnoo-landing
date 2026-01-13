@@ -62,12 +62,27 @@
     /* Reduced size */
 }
 
-.mobileAppPreview {
-    margin-bottom: var(--spacing-2xl);
+/* Hero Section - Column on mobile, row on desktop */
+.heroSection {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 340px;
-    /* Limit width for better mobile view */
-    align-self: center;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Visual content - hidden on mobile, visible on desktop */
+.visualContent {
+    display: none;
+}
+
+.appPreview {
+    width: 100%;
 }
 
 .headline {
@@ -169,98 +184,94 @@
     .container {
         height: 100vh;
         overflow: hidden;
-        /* Prevent scrolling */
     }
 
     .heroBackground {
-        display: block;
-        /* Show on desktop */
-        height: 100vh;
-        width: 65%;
-        mask-image: linear-gradient(to left, black 50%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to left, black 50%, transparent 100%);
-    }
-
-    .backgroundImage {
-        object-position: center left;
+        display: none;
+        /* No background image per user request */
     }
 
     .contentWrapper {
         height: 100vh;
-        padding: 0 var(--spacing-3xl) var(--spacing-lg);
-        /* Zero top padding to pin header container */
+        padding: var(--spacing-lg) var(--spacing-3xl);
         justify-content: flex-start;
-        /* Start from top */
     }
 
     .headerContainer {
-        margin-bottom: var(--spacing-lg);
-        /* Reduce header margin */
+        margin-bottom: var(--spacing-md);
         flex-shrink: 0;
         width: 100%;
-        /* Reverted max-width per user request */
     }
 
     .mainContent {
         margin-top: 0;
-        max-width: 70%;
-        /* Increased from 50% to allow wider text */
+        max-width: 100%;
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* Center content vertically in remaining space */
-        align-items: flex-start;
-        /* Restore left align */
+        align-items: stretch;
         text-align: left;
     }
 
-    .mobileHeroImage,
-    .mobileAppPreview {
+    .heroSection {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-3xl);
+        flex: 1;
+    }
+
+    .textContent {
+        flex: 1;
+        max-width: 550px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .mobileHeroImage {
         display: none;
     }
 
+    .visualContent {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .appPreview {
+        max-width: 380px;
+        /* Large phone mockup */
+    }
+
     .headline {
-        font-size: clamp(36px, 3.5vw, 64px);
-        /* Slightly smaller max size */
+        font-size: clamp(42px, 4vw, 60px);
         margin-bottom: var(--spacing-md);
         margin-left: 0;
-        /* Reset margins */
         margin-right: 0;
         max-width: 100%;
-        /* Let container dictate width since we use BR */
     }
 
     .subheadline {
         margin-bottom: var(--spacing-lg);
         margin-left: 0;
         margin-right: 0;
-        max-width: 550px;
-        /* Force 2-line wrap */
+        max-width: 100%;
     }
 
     .formContainer {
-        margin-bottom: var(--spacing-xl);
+        margin-bottom: var(--spacing-md);
         margin-left: 0;
         margin-right: 0;
+        max-width: 360px;
     }
 
     .launchText {
         justify-content: flex-start;
     }
 
-
     .featuresGrid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 650px;
-        gap: var(--spacing-sm);
-        margin-top: var(--spacing-xl);
-        /* Restore larger spacing for desktop */
-        /* Tighter gap */
-    }
-
-    .featureCard {
-        padding: var(--spacing-md);
-        /* Smaller padding in cards */
+        display: none;
+        /* Hide features on desktop per reference */
     }
 }

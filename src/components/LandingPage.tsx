@@ -48,60 +48,69 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                 </div>
 
                 <main className={styles.mainContent}>
-                    <div className={styles.mobileHeroImage}>
-                        <Image
-                            src="/onboarding-samplemenu.png"
-                            alt="Sample Menu Preview"
-                            width={280}
-                            height={280}
-                            style={{ objectFit: 'contain' }}
-                            priority
-                        />
-                    </div>
-                    <h1 className={styles.headline}>
-                        <span className={styles.headlineLight}>{dict.hero.titleStart}</span>
-                        <br />
-                        <span className={styles.headlineBold}>{dict.hero.titleEnd}</span>
-                    </h1>
-                    <p className={styles.subheadline}>{dict.hero.subtitle}</p>
-
-                    <div className={styles.formContainer}>
-                        {submitted ? (
-                            <div style={{ padding: '24px', background: 'rgba(230, 255, 250, 0.8)', border: '1px solid rgba(0, 150, 136, 0.2)', borderRadius: '12px', color: '#00695c' }}>
-                                <h3 style={{ marginBottom: '8px', fontFamily: 'var(--font-display)', fontWeight: 600 }}>{dict.success.title}</h3>
-                                <p style={{ fontFamily: 'var(--font-body)' }}>{dict.success.message}</p>
-                            </div>
-                        ) : (
-                            <form onSubmit={handleSubmit} className={styles.form}>
-                                <Input
-                                    placeholder={dict.hero.emailPlaceholder}
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    type="email"
-                                    aria-label="Email address"
+                    <div className={styles.heroSection}>
+                        {/* Left Column: Text Content */}
+                        <div className={styles.textContent}>
+                            <div className={styles.mobileHeroImage}>
+                                <Image
+                                    src="/onboarding-samplemenu.png"
+                                    alt="Sample Menu Preview"
+                                    width={280}
+                                    height={280}
+                                    style={{ objectFit: 'contain' }}
+                                    priority
                                 />
-                                <Button type="submit" fullWidth>{dict.hero.joinButton}</Button>
-                            </form>
-                        )}
-                        <div className={styles.launchText}>
-                            <span>{dict.hero.launchText}</span>
-                            <span style={{ opacity: 0.5 }}>|</span>
-                            <span>{dict.hero.iosAndroid}</span>
+                            </div>
+                            <h1 className={styles.headline}>
+                                <span className={styles.headlineLight}>{dict.hero.titleStart}</span>
+                                <br />
+                                <span className={styles.headlineBold}>{dict.hero.titleEnd}</span>
+                            </h1>
+                            <p className={styles.subheadline}>{dict.hero.subtitle}</p>
+
+                            <div className={styles.formContainer}>
+                                {submitted ? (
+                                    <div style={{ padding: '24px', background: 'rgba(230, 255, 250, 0.8)', border: '1px solid rgba(0, 150, 136, 0.2)', borderRadius: '12px', color: '#00695c' }}>
+                                        <h3 style={{ marginBottom: '8px', fontFamily: 'var(--font-display)', fontWeight: 600 }}>{dict.success.title}</h3>
+                                        <p style={{ fontFamily: 'var(--font-body)' }}>{dict.success.message}</p>
+                                    </div>
+                                ) : (
+                                    <form onSubmit={handleSubmit} className={styles.form}>
+                                        <Input
+                                            placeholder={dict.hero.emailPlaceholder}
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                            type="email"
+                                            aria-label="Email address"
+                                        />
+                                        <Button type="submit" fullWidth>{dict.hero.joinButton}</Button>
+                                    </form>
+                                )}
+                                <div className={styles.launchText}>
+                                    <span>{dict.hero.launchText}</span>
+                                    <span style={{ opacity: 0.5 }}>|</span>
+                                    <span>{dict.hero.iosAndroid}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Column: Phone Mockup */}
+                        <div className={styles.visualContent}>
+                            <div className={styles.appPreview}>
+                                <Image
+                                    src="/Landing-page-mobile-home-asset.webp"
+                                    alt="Omnoo Mobile App Preview"
+                                    width={400}
+                                    height={800}
+                                    style={{ width: '100%', height: 'auto' }}
+                                    priority
+                                />
+                            </div>
                         </div>
                     </div>
 
-                    {/* Mobile Home Asset Image */}
-                    <div className={styles.mobileAppPreview}>
-                        <Image
-                            src="/Landing-page-mobile-home-asset.webp"
-                            alt="Omnoo Mobile App Preview"
-                            width={320}
-                            height={600}
-                            style={{ width: '100%', height: 'auto', borderRadius: '24px' }}
-                        />
-                    </div>
-
+                    {/* Features Grid - Mobile Only */}
                     <div className={styles.featuresGrid}>
                         <FeatureCard
                             icon="✨"
