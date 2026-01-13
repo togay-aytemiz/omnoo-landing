@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './Header.module.css';
 import { Lang } from '@/i18n/types';
 
@@ -17,19 +16,17 @@ export const Header = ({ lang }: HeaderProps) => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logoContainer}>
-                <Image
-                    src="/omnoo-header.webp"
-                    alt="Omnoo Mascot"
-                    width={40}
-                    height={40}
-                    className={styles.headerMascot}
-                />
-                <div className={styles.logo}>Omnoo</div>
-            </div>
+            <div className={styles.logo}>Omnoo</div>
             <Link href={targetUrl} className={styles.langSwitch} aria-label={`Switch to ${label}`}>
                 {label}
             </Link>
         </header>
+    );
+};
+
+<Link href={targetUrl} className={styles.langSwitch} aria-label={`Switch to ${label}`}>
+    {label}
+</Link>
+        </header >
     );
 };

@@ -58,11 +58,20 @@ export const en = {
     hero: {
         titleStart: "The Most Efficient Way to",
         titleEnd: "Plan Weekly Meals with AI",
-        subtitle: "Automate your weekly plan with Omnoo, your personal chef that optimizes every step from shopping to cooking, tailored to your taste, office, and gym routine.",
+        subtitle: "Smart menus tailored to your taste, office and gym routine.",
+        benefits: [
+            "Fully personalized recipes",
+            "Cook once, eat twice approach",
+            "Smart ingredient grouping",
+            "Detailed nutritional info"
+        ],
         emailPlaceholder: "your@email.com",
         joinButton: "Join the Waitlist — Early Access",
-        launchText: "Free early access for first users",
-        iosAndroid: "Coming Soon to iOS & Android",
+        earlyAccessFree: "Completely free for early access users",
+        secondaryCta: "What makes Omnoo different?",
+        comingSoon: "Coming Soon",
+        appStore: "App Store",
+        googlePlay: "Google Play",
     },
     features: {
         personalized: {
