@@ -183,6 +183,35 @@
     margin-bottom: 0;
 }
 
+.secondaryCta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+    padding: 0;
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: gap 0.2s ease;
+}
+
+.secondaryCta:hover {
+    gap: var(--spacing-sm);
+}
+
+.secondaryCtaArrow {
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.secondaryCta:hover .secondaryCtaArrow {
+    transform: translateX(4px);
+}
+
 .storeBadges {
     display: flex;
     gap: var(--spacing-sm);
