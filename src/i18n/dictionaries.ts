@@ -5,8 +5,8 @@ export const tr = {
         waitlist: "Bekleme Listesine Katıl",
     },
     hero: {
-        title: "Akşam Ne Yesem Diye Düşünmeyin",
-        subtitle: "Rutininize, tercihlerinize ve yaşam tarzınıza göre kişiselleştirilmiş haftalık yemek planları oluşturan yapay zeka şefiniz.",
+        title: "Yapay Zeka ile Haftalık Yemek Planlamanın En Verimli Hali",
+        subtitle: "Damak tadınıza, ofis ve spor rutininize uygun; alışverişten pişirmeye her adımı optimize eden kişisel şefiniz Omnoo ile haftalık planınızı otomatiğe alın.",
         emailPlaceholder: "E-posta adresiniz",
         joinButton: "Bekleme Listesine Katıl — Erken Erişim",
         launchText: "İlk kullanıcılar için ücretsiz erken erişim",
@@ -14,20 +14,20 @@ export const tr = {
     },
     features: {
         personalized: {
-            title: "Tamamen Kişiselleştirilmiş",
-            desc: "İşinize, spor programınıza ve yaşam tarzınıza uyum sağlar",
+            title: "Akıllı Haftalık Plan",
+            desc: "Ofis ve spor günlerinize uyumlu, zaman kazandıran haftalık akışlar.",
         },
         cuisines: {
-            title: "10+ Mutfak",
-            desc: "Türk, İtalyan, Asya ve daha fazlası",
+            title: "Yerel & Global Lezzetler",
+            desc: "Türk damak tadına uygun, yerel malzemelerle 10+ dünya mutfağı.",
         },
         cookSmart: {
-            title: "Akıllı Pişir",
-            desc: "Bir kere pişir, iki kere ye verimliliği",
+            title: "Maksimum Verimlilik",
+            desc: "Benzer malzemeleri gruplayan, israfı önleyen akıllı reçeteler.",
         },
         grocery: {
-            title: "Otomatik Alışveriş",
-            desc: "Haftalık alışveriş listesi dahil",
+            title: "Şeffaf İçerik & Alışveriş",
+            desc: "Besin değerleri net, market listesi otomatik ve optimize.",
         },
     },
     badges: {
@@ -46,8 +46,8 @@ export const en = {
         waitlist: "Join Waitlist",
     },
     hero: {
-        title: "Never Worry About What's for Dinner Again",
-        subtitle: "Your AI personal chef that creates personalized weekly meal plans based on your routine, preferences, and lifestyle.",
+        title: "The Most Efficient Way to Plan Weekly Meals with AI",
+        subtitle: "Automate your weekly plan with Omnoo, your personal chef that optimizes every step from shopping to cooking, tailored to your taste, office, and gym routine.",
         emailPlaceholder: "your@email.com",
         joinButton: "Join the Waitlist — Early Access",
         launchText: "Free early access for first users",
@@ -55,20 +55,20 @@ export const en = {
     },
     features: {
         personalized: {
-            title: "Fully Personalized",
-            desc: "Adapts to your work, gym & lifestyle",
+            title: "Smart Weekly Planning",
+            desc: "Time-saving weekly flows adaptable to your office and gym days.",
         },
         cuisines: {
-            title: "10+ Cuisines",
-            desc: "Turkish, Italian, Asian & more",
+            title: "Global Flavors, Local Touch",
+            desc: "10+ world cuisines adapted to local ingredients and your taste.",
         },
         cookSmart: {
-            title: "Cook Smart",
-            desc: "Cook once, eat twice efficiency",
+            title: "Maximum Efficiency",
+            desc: "Smart recipes that group similar ingredients and prevent waste.",
         },
         grocery: {
-            title: "Auto Groceries",
-            desc: "Weekly shopping list included",
+            title: "Transparent & Optimized",
+            desc: "Clear nutrition info and automatically optimized grocery lists.",
         },
     },
     badges: {
