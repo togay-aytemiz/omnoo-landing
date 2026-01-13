@@ -49,6 +49,10 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
 
                 <main className={styles.mainContent}>
                     <div className={styles.heroWidget}>
+                        <div className={styles.mascotLabel}>
+                            <span>✨</span>
+                            <span>{lang === 'tr' ? 'Kişisel Şefiniz' : 'Your Personal Chef'}</span>
+                        </div>
                         <Image
                             src="/onboarding-samplemenu.png"
                             alt="Sample Menu"
