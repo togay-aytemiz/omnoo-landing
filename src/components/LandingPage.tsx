@@ -104,30 +104,6 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                     style={{ width: '100%', height: 'auto' }}
                                 />
                             </div>
-
-                            {/* Features Grid */}
-                            <div className={styles.featuresGrid}>
-                                <FeatureCard
-                                    icon="✨"
-                                    title={dict.features.personalized.title}
-                                    desc={dict.features.personalized.desc}
-                                />
-                                <FeatureCard
-                                    icon="🍽️"
-                                    title={dict.features.cuisines.title}
-                                    desc={dict.features.cuisines.desc}
-                                />
-                                <FeatureCard
-                                    icon="⚡"
-                                    title={dict.features.cookSmart.title}
-                                    desc={dict.features.cookSmart.desc}
-                                />
-                                <FeatureCard
-                                    icon="🛒"
-                                    title={dict.features.grocery.title}
-                                    desc={dict.features.grocery.desc}
-                                />
-                            </div>
                         </div>
 
                         {/* Right Column: Phone Mockup */}
