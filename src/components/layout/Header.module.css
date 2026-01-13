@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-2xl);
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font-logo);
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--color-text-primary);
+    letter-spacing: -0.03em;
+    /* Add the underline dash if needed, though pure text for now based on 'Omnoo' usually having a distinctive look */
+    position: relative;
+}
+
+/* Optional: The orange dash under the logo if seen in design, but user said "header that includes my logo" */
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+    transform: translateY(8px);
+}
+
+.langSwitch {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-text-primary);
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-full);
+}
+
+.langSwitch:hover {
+    opacity: 1;
+    background-color: white;
+}

@@ -1,0 +1,172 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--color-background);
+    overflow-x: hidden;
+}
+
+.contentSide {
+    flex: 1;
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+}
+
+.imageSide {
+    width: 100%;
+    height: 60vh;
+    /* Mobile height */
+    position: relative;
+    background-color: #e0e0e0;
+    /* placeholder */
+    overflow: hidden;
+}
+
+.backgroundImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Scroll behavior for desktop: fixed image */
+/* On mobile: "background image that scrolls with the content not fixed" implies it's just a block? */
+/* Wait, "add a background image that scrolls with the content" simply means position: absolute or static */
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+        /* Prevent body scroll if we scroll inside contentSide */
+    }
+
+    .contentSide {
+        width: 45%;
+        /* Less than half to leave "huge gap" visually if we push content left */
+        /* Actually reference has content L, Image R. */
+        /* "reference image has huge gap between content and background image" might mean the text container */
+        flex: none;
+        height: 100vh;
+        overflow-y: auto;
+        padding: var(--spacing-3xl) var(--spacing-2xl);
+        padding-left: max(5vw, var(--spacing-3xl));
+        /* Dynamic padding */
+    }
+
+    .imageSide {
+        flex: 1;
+        height: 100vh;
+    }
+
+    .backgroundImage {
+        height: 100%;
+    }
+}
+
+/* Typography styles within the page */
+.headline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 42px;
+    /* fallback */
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.subheadline {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-xl);
+    max-width: 540px;
+}
+
+.formContainer {
+    margin-bottom: var(--spacing-2xl);
+    max-width: 480px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.launchText {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+    .featuresGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.featureCard {
+    background: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
+}
+
+.featureCard:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.featureTitle {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-primary);
+}
+
+.featureDesc {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+/* Mobile specific adjustment for image order if needed */
+@media (max-width: 1023px) {
+
+    /* "For mobile, there will be content and ... add a background image that scrolls" */
+    /* User didn't specify order, but usually Hero Image first or Content? */
+    /* "plan is to add a background image that scrolls with the content not fixed" */
+    /* Often mobile landing pages have image at top. */
+    .container {
+        height: auto;
+    }
+
+    .imageSide {
+        order: -1;
+        /* Image on top? Or bottom? Reference image has full image right. */
+        /* If I put image top, it might look good. */
+        height: 40vh;
+    }
+}
