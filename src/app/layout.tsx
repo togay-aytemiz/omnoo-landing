@@ -35,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} ${fraunces.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${fraunces.variable} ${outfit.variable}`}>
+      <body>
         {children}
       </body>
     </html>

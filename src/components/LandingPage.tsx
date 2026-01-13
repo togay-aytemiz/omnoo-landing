@@ -29,16 +29,31 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.contentSide}>
-                <Header lang={lang} />
+            {/* Background Layer */}
+            <div className={styles.heroBackground}>
+                <Image
+                    src="/hero-bg.jpg"
+                    alt="Omnoo App Preview"
+                    fill
+                    className={styles.backgroundImage}
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 70vw"
+                />
+            </div>
 
-                <main>
+            {/* Content Layer */}
+            <div className={styles.contentWrapper}>
+                <div className={styles.headerContainer}>
+                    <Header lang={lang} />
+                </div>
+
+                <main className={styles.mainContent}>
                     <h1 className={styles.headline}>{dict.hero.title}</h1>
                     <p className={styles.subheadline}>{dict.hero.subtitle}</p>
 
                     <div className={styles.formContainer}>
                         {submitted ? (
-                            <div style={{ padding: '24px', background: '#e0f2f1', borderRadius: '12px', color: '#00695c' }}>
+                            <div style={{ padding: '24px', background: 'rgba(230, 255, 250, 0.8)', border: '1px solid rgba(0, 150, 136, 0.2)', borderRadius: '12px', color: '#00695c' }}>
                                 <h3 style={{ marginBottom: '8px', fontFamily: 'var(--font-display)', fontWeight: 600 }}>{dict.success.title}</h3>
                                 <p style={{ fontFamily: 'var(--font-body)' }}>{dict.success.message}</p>
                             </div>
@@ -55,12 +70,11 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                 <Button type="submit" fullWidth>{dict.hero.joinButton}</Button>
                             </form>
                         )}
-                        <p className={styles.launchText}>
-                            {dict.hero.launchText}
-                        </p>
-                        <p className={styles.launchText} style={{ marginTop: '4px' }}>
-                            {dict.hero.iosAndroid}
-                        </p>
+                        <div className={styles.launchText}>
+                            <span>{dict.hero.launchText}</span>
+                            <span style={{ opacity: 0.5 }}>|</span>
+                            <span>{dict.hero.iosAndroid}</span>
+                        </div>
                     </div>
 
                     <div className={styles.featuresGrid}>
@@ -71,7 +85,7 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                         />
                         <FeatureCard
                             icon="🍽️"
-                            title={dict.features.cuisines.title} // Fixed property name from dictionary definition
+                            title={dict.features.cuisines.title}
                             desc={dict.features.cuisines.desc}
                         />
                         <FeatureCard
@@ -87,21 +101,9 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                     </div>
                 </main>
 
-                <footer style={{ marginTop: 'auto', paddingTop: '32px', fontSize: '12px', color: 'var(--color-text-muted)', fontFamily: 'var(--font-body)' }}>
-                    © {new Date().getFullYear()} Omnoo. All rights reserved.
+                <footer style={{ marginTop: 'auto', paddingTop: '32px', fontSize: '12px', color: 'var(--color-text-muted)', fontFamily: 'var(--font-body)', opacity: 0.7 }}>
+                    © {new Date().getFullYear()} Omnoo.
                 </footer>
-            </div>
-
-            <div className={styles.imageSide}>
-                <Image
-                    src="/hero-bg.jpg"
-                    alt="Omnoo App Preview"
-                    fill
-                    className={styles.backgroundImage}
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                {/* Floating Badges overlay could go here if needed per design, but sticking to simple first */}
             </div>
         </div>
     );
