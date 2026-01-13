@@ -191,8 +191,12 @@
 .secondaryCtaWrapper {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .secondaryCtaImage {
