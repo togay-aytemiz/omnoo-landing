@@ -43,9 +43,13 @@
 }
 
 .mainContent {
-    margin-top: 30vh;
-    /* Push content down on mobile */
+    margin-top: var(--spacing-xl);
+    /* Standard spacing */
     margin-bottom: var(--spacing-3xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .headline {
@@ -56,6 +60,8 @@
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-lg);
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subheadline {
@@ -67,11 +73,16 @@
     opacity: 0.9;
     margin-bottom: var(--spacing-xl);
     max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .formContainer {
     margin-bottom: var(--spacing-3xl);
     max-width: 480px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form {
@@ -87,6 +98,7 @@
     margin-top: var(--spacing-md);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-xs);
     flex-wrap: wrap;
 }
