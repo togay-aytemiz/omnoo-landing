@@ -5,7 +5,7 @@ export const tr = {
         waitlist: "Bekleme Listesine Katıl",
     },
     hero: {
-        title: "Haftalık Yemek Planlamanın En Eğlenceli Hali",
+        title: "Yemek Planlamanın En Eğlenceli Hali",
         subtitle: "Damak tadınıza, ofis ve spor rutininize uygun; alışverişten pişirmeye her adımı optimize eden kişisel şefiniz Omnoo ile haftalık planınızı otomatiğe alın.",
         emailPlaceholder: "E-posta adresiniz",
         joinButton: "Bekleme Listesine Katıl — Erken Erişim",
