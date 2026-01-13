@@ -168,21 +168,36 @@
         flex-direction: column;
         justify-content: center;
         /* Center content vertically in remaining space */
+        align-items: flex-start;
+        /* Restore left align */
+        text-align: left;
     }
 
     .headline {
         font-size: clamp(36px, 3.5vw, 64px);
         /* Slightly smaller max size */
         margin-bottom: var(--spacing-md);
+        margin-left: 0;
+        /* Reset margins */
+        margin-right: 0;
     }
 
     .subheadline {
         margin-bottom: var(--spacing-lg);
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .formContainer {
         margin-bottom: var(--spacing-xl);
+        margin-left: 0;
+        margin-right: 0;
     }
+
+    .launchText {
+        justify-content: flex-start;
+    }
+
 
     .featuresGrid {
         grid-template-columns: 1fr 1fr;
