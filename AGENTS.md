@@ -8,10 +8,10 @@ Bu proje üzerinde çalışan tüm AI ajanları aşağıdaki kurallara **kesinli
 - **Üslup**: Net, kısa ve sonuç odaklı olun.
 
 ## Commit Kuralları
-- **Mesaj Formatı**: Commit mesajları **tek satır** olmalıdır.
+- **Mesaj Formatı**: Commit mesajları **tek satır** ve **İngilizce (English)** olmalıdır.
 - **İçerik**: Yapılan değişikliği özetleyen kısa ve net bir ifade kullanın.
-    - *Örnek*: "Landing page hero başlığı güncellendi"
-    - *Hatalı*: "Başlık değiştirildi çünkü kullanıcı istedi ve..." (uzun açıklamalar yok)
+    - *Örnek*: "Update landing page hero title"
+    - *Hatalı*: "Başlık değiştirildi çünkü kullanıcı istedi ve..." (Türkçe veya uzun açıklamalar yok)
 
 ## Kodlama Standartları
 - **Styling**: Tailwind yerine **Vanilla CSS Modules** ve `src/theme/tokens.css` değişkenlerini kullanın.
