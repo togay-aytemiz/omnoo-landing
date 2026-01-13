@@ -78,7 +78,7 @@
 }
 
 .formContainer {
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-md);
     max-width: 480px;
     width: 100%;
     margin-left: auto;
@@ -219,6 +219,8 @@
         grid-template-columns: 1fr 1fr;
         max-width: 650px;
         gap: var(--spacing-sm);
+        margin-top: var(--spacing-xl);
+        /* Restore larger spacing for desktop */
         /* Tighter gap */
     }
 
