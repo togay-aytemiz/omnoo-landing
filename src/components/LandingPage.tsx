@@ -90,14 +90,23 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
 
                                 <p className={styles.earlyAccessText}>{dict.hero.earlyAccessFree}</p>
 
-                                <button
-                                    type="button"
-                                    className={styles.secondaryCta}
-                                    onClick={() => {/* Modal will be implemented later */ }}
-                                >
-                                    {dict.hero.secondaryCta}
-                                    <span className={styles.secondaryCtaArrow}>→</span>
-                                </button>
+                                <div className={styles.secondaryCtaWrapper}>
+                                    <Image
+                                        src="/Why-omnoo.webp"
+                                        alt="Omnoo Mascot"
+                                        width={48}
+                                        height={48}
+                                        className={styles.secondaryCtaImage}
+                                    />
+                                    <button
+                                        type="button"
+                                        className={styles.secondaryCta}
+                                        onClick={() => {/* Modal will be implemented later */ }}
+                                    >
+                                        {dict.hero.secondaryCta}
+                                        <span className={styles.secondaryCtaArrow}>→</span>
+                                    </button>
+                                </div>
                             </div>
 
                             {/* Mobile App Preview - Below CTA */}

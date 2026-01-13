@@ -183,11 +183,24 @@
     margin-bottom: 0;
 }
 
+.secondaryCtaWrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.secondaryCtaImage {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
 .secondaryCta {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
-    margin-top: var(--spacing-md);
+    margin-top: 0;
     padding: 0;
     background: none;
     border: none;
