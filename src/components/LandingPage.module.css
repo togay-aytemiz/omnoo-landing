@@ -145,8 +145,8 @@
 
     .contentWrapper {
         height: 100vh;
-        padding: var(--spacing-md) var(--spacing-3xl);
-        /* Reduce vertical padding */
+        padding: 0 var(--spacing-3xl) var(--spacing-lg);
+        /* Remove top padding completely, resize vertical padding */
         justify-content: flex-start;
         /* Start from top */
     }
@@ -156,6 +156,8 @@
         /* Reduce header margin */
         flex-shrink: 0;
         width: 100%;
+        margin-top: var(--spacing-md);
+        /* Add a specific small top spacing instead of wrapper padding, or 0 if we want it absolutely top */
         /* Reverted max-width per user request */
     }
 
