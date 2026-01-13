@@ -23,10 +23,3 @@ export const Header = ({ lang }: HeaderProps) => {
         </header>
     );
 };
-
-<Link href={targetUrl} className={styles.langSwitch} aria-label={`Switch to ${label}`}>
-    {label}
-</Link>
-        </header >
-    );
-};
