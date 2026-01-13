@@ -9,7 +9,7 @@ export const tr = {
         subtitle: "Rutininize, tercihlerinize ve yaşam tarzınıza göre kişiselleştirilmiş haftalık yemek planları oluşturan yapay zeka şefiniz.",
         emailPlaceholder: "E-posta adresiniz",
         joinButton: "Bekleme Listesine Katıl — Erken Erişim",
-        launchText: "Çok yakında Türkiye'de 🇹🇷 • İlk kullanıcılar için ücretsiz erken erişim",
+        launchText: "İlk kullanıcılar için ücretsiz erken erişim",
         iosAndroid: "Yakında iOS & Android'de",
     },
     features: {
@@ -50,7 +50,7 @@ export const en = {
         subtitle: "Your AI personal chef that creates personalized weekly meal plans based on your routine, preferences, and lifestyle.",
         emailPlaceholder: "your@email.com",
         joinButton: "Join the Waitlist — Early Access",
-        launchText: "Launching soon in Turkey 🇹🇷 • Free early access for first users",
+        launchText: "Free early access for first users",
         iosAndroid: "Coming Soon to iOS & Android",
     },
     features: {

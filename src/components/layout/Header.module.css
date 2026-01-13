@@ -17,19 +17,6 @@
     position: relative;
 }
 
-/* Optional: The orange dash under the logo if seen in design, but user said "header that includes my logo" */
-.logo::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 4px;
-    background-color: var(--color-primary);
-    border-radius: var(--radius-full);
-    transform: translateY(8px);
-}
-
 .langSwitch {
     font-family: var(--font-body);
     font-weight: 600;
