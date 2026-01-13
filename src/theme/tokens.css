@@ -1,43 +1,45 @@
 :root {
-  /* Brand Colors */
-  --color-primary: #FF6B4A; /* Join Waitlist button color */
-  --color-primary-hover: #E55A3C;
-  
-  /* Backgrounds */
-  --color-background: #F9F9F8;
-  --color-surface: #FFFFFF;
-  --color-surface-glass: rgba(255, 255, 255, 0.7);
-  
-  /* Text */
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #4A4A4A; /* Sub-headlines */
-  --color-text-muted: #888888;
-  --color-text-inverse: #FFFFFF;
+    /* Brand Colors */
+    --color-primary: #FF6B4A;
+    /* Join Waitlist button color */
+    --color-primary-hover: #E55A3C;
 
-  /* Typography Variables (mapped to Next.js fonts) */
-  --font-logo: var(--font-poppins);
-  --font-display: var(--font-fraunces);
-  --font-body: var(--font-outfit);
+    /* Backgrounds */
+    --color-background: #F9F9F8;
+    --color-surface: #FFFFFF;
+    --color-surface-glass: rgba(255, 255, 255, 0.7);
 
-  /* Spacing */
-  --spacing-2xs: 4px;
-  --spacing-xs: 8px;
-  --spacing-sm: 12px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  --spacing-3xl: 64px;
+    /* Text */
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #4A4A4A;
+    /* Sub-headlines */
+    --color-text-muted: #888888;
+    --color-text-inverse: #FFFFFF;
 
-  /* Borders & Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-full: 9999px;
-  --border-light: 1px solid rgba(0, 0, 0, 0.05);
+    /* Typography Variables (mapped to Next.js fonts) */
+    --font-logo: var(--font-poppins);
+    --font-display: var(--font-bricolage);
+    --font-body: var(--font-outfit);
 
-  /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
-  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.05);
+    /* Spacing */
+    --spacing-2xs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+
+    /* Borders & Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+    --border-light: 1px solid rgba(0, 0, 0, 0.05);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.05);
 }

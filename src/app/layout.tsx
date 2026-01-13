@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Fraunces, Outfit } from "next/font/google";
+import { Poppins, Bricolage_Grotesque, Outfit } from "next/font/google";
 import "@/theme/tokens.css";
 import "./globals.css";
 
@@ -10,9 +10,10 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  weight: ["500", "700"], // Medium, Bold
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  // Bricolage Grotesque is a variable font by default, but we can specify weights if needed or rely on variable axes.
+  // Including normal range for safety.
   subsets: ["latin"],
   display: "swap",
 });
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${fraunces.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${bricolage.variable} ${outfit.variable}`}>
       <body>
         {children}
       </body>
