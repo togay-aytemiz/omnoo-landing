@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-lg) 0;
-    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-md) 0;
+    /* Reduced from lg to md */
+    margin-bottom: 0;
+    /* Let container handle margin */
     width: 100%;
 }
 
