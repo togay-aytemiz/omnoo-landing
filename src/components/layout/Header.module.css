@@ -53,3 +53,59 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
+
+/* Right side container */
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/* Store Badges - Hidden on mobile, shown on desktop */
+.headerStoreBadges {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .headerStoreBadges {
+        display: flex;
+        gap: var(--spacing-sm);
+    }
+
+    .storeBadge {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        padding: 8px 14px;
+        background: #1a1a1a;
+        border-radius: 8px;
+        color: white;
+        cursor: default;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .storeBadge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .storeBadgeText {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .storeComingSoon {
+        font-size: 8px;
+        font-family: var(--font-body);
+        opacity: 0.8;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .storeName {
+        font-size: 14px;
+        font-family: var(--font-display);
+        font-weight: 600;
+    }
+}

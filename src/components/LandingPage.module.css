@@ -341,8 +341,8 @@
 /* DESKTOP STYLES */
 @media (min-width: 1024px) {
     .container {
-        height: 100vh;
-        overflow: hidden;
+        min-height: 100vh;
+        /* Allow scrolling on desktop */
     }
 
     .heroBackground {
@@ -351,7 +351,6 @@
     }
 
     .contentWrapper {
-        height: 100vh;
         padding: var(--spacing-lg) var(--spacing-3xl);
         justify-content: flex-start;
     }
