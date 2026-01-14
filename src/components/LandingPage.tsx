@@ -74,6 +74,7 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                     <div className={styles.heroSection}>
                         {/* Left Column: Text Content */}
                         <div className={styles.textContent}>
+                            {/* 1. Ana Başlık & Alt Başlık */}
                             <h1 className={styles.headline}>
                                 <span className={styles.headlineLight}>{dict.hero.titleStart}</span>
                                 <br />
@@ -81,16 +82,7 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                             </h1>
                             <p className={styles.subheadline}>{dict.hero.subtitle}</p>
 
-                            {/* Benefits Checklist */}
-                            <ul className={styles.benefitsList}>
-                                {dict.hero.benefits.map((benefit, index) => (
-                                    <li key={index} className={styles.benefitItem}>
-                                        <span className={styles.benefitCheck}>✓</span>
-                                        <span>{benefit}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
+                            {/* 2. E-posta Input & CTA Butonu */}
                             <div className={styles.formContainer}>
                                 {submitted ? (
                                     <div style={{ padding: '24px', background: 'rgba(230, 255, 250, 0.8)', border: '1px solid rgba(0, 150, 136, 0.2)', borderRadius: '12px', color: '#00695c' }}>
@@ -118,29 +110,10 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                         )}
                                     </form>
                                 )}
-
                                 <p className={styles.earlyAccessText}>{dict.hero.earlyAccessFree}</p>
-
-                                <div className={styles.secondaryCtaWrapper}>
-                                    <Image
-                                        src="/Why-omnoo.webp"
-                                        alt="Omnoo Mascot"
-                                        width={48}
-                                        height={48}
-                                        className={styles.secondaryCtaImage}
-                                    />
-                                    <button
-                                        type="button"
-                                        className={styles.secondaryCta}
-                                        onClick={() => {/* Modal will be implemented later */ }}
-                                    >
-                                        {dict.hero.secondaryCta}
-                                        <span className={styles.secondaryCtaArrow}>→</span>
-                                    </button>
-                                </div>
                             </div>
 
-                            {/* Mobile App Preview - Below CTA */}
+                            {/* Mobile App Preview - Moved above benefits for mobile */}
                             <div className={styles.mobileAppPreview}>
                                 <Image
                                     src="/landing-hero.webp"
@@ -149,6 +122,25 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                     height={640}
                                     style={{ width: '100%', height: 'auto' }}
                                 />
+                            </div>
+
+                            {/* Section Title - Mobile only */}
+                            <h2 className={styles.benefitsSectionTitle}>{dict.hero.secondaryCta}</h2>
+
+                            {/* Benefits Grid (2x2 Cardlets) */}
+                            <div className={styles.benefitsGrid}>
+                                {dict.hero.benefits.map((benefit, index) => (
+                                    <div key={index} className={styles.benefitCard}>
+                                        <Image
+                                            src={benefit.icon}
+                                            alt=""
+                                            width={64}
+                                            height={64}
+                                            className={styles.benefitIcon}
+                                        />
+                                        <span className={styles.benefitText}>{benefit.text}</span>
+                                    </div>
+                                ))}
                             </div>
 
                             {/* Mobile Store Badges */}
@@ -171,6 +163,19 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                         <span className={styles.storeName}>{dict.hero.googlePlay}</span>
                                     </div>
                                 </div>
+                            </div>
+
+                            {/* Mobile Footer CTA - Only visible on mobile */}
+                            <div className={styles.mobileFooterCta}>
+                                <div className={styles.mobileFooterDivider} />
+                                <p className={styles.mobileFooterText}>{dict.hero.mobileFooterText}</p>
+                                <button
+                                    type="button"
+                                    className={styles.mobileFooterButton}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                                >
+                                    {dict.hero.mobileFooterCta}
+                                </button>
                             </div>
                         </div>
 

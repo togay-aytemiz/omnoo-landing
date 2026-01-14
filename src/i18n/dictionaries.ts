@@ -9,10 +9,10 @@ export const tr = {
         titleEnd: "Eğlenceli Hali",
         subtitle: "Türk damak tadına uygun, ofis ve spor rutinine göre şekillenen akıllı menüler.",
         benefits: [
-            "Tamamen kişiye özel reçeteler",
-            "Bir pişir, iki ye mantığı",
-            "Benzer malzemeleri gruplama",
-            "Detaylı besin değerleri"
+            { text: "Tamamen kişiye özel modern tarifler", icon: "/1.webp" },
+            { text: "Mutfak mesaisini azaltan döngü", icon: "/2.webp" },
+            { text: "Bütçeyi yöneten malzeme sinerjisi", icon: "/3.webp" },
+            { text: "Adım adım tarifler, besin takibi", icon: "/4.webp" }
         ],
         emailPlaceholder: "E-posta adresiniz",
         joinButton: "Erken Erişim Kazan",
@@ -22,6 +22,8 @@ export const tr = {
         comingSoon: "Yakında",
         appStore: "App Store",
         googlePlay: "Google Play",
+        mobileFooterText: "Hazır mısın?",
+        mobileFooterCta: "Erken Erişim Kazan",
     },
     features: {
         personalized: {
@@ -64,10 +66,10 @@ export const en = {
         titleEnd: "Plan Weekly Meals with AI",
         subtitle: "Smart menus tailored to your taste, office and gym routine.",
         benefits: [
-            "Fully personalized recipes",
-            "Cook once, eat twice approach",
-            "Smart ingredient grouping",
-            "Detailed nutritional info"
+            { text: "Fully personalized modern recipes", icon: "/1.webp" },
+            { text: "Cook-once cycles that halve kitchen time", icon: "/2.webp" },
+            { text: "Budget-smart ingredient synergy", icon: "/3.webp" },
+            { text: "Step-by-step recipes, detailed nutrition", icon: "/4.webp" }
         ],
         emailPlaceholder: "your@email.com",
         joinButton: "Get Early Access",
@@ -77,6 +79,8 @@ export const en = {
         comingSoon: "Coming Soon",
         appStore: "App Store",
         googlePlay: "Google Play",
+        mobileFooterText: "Ready to start?",
+        mobileFooterCta: "Get Early Access",
     },
     features: {
         personalized: {

@@ -26,8 +26,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Omnoo - Your AI Personal Chef",
-  description: "Personalized weekly meal plans based on your routine, preferences, and lifestyle.",
+  title: "Omnoo ile Tanışın! 🥦 Mutfağın Yeni Neşesi",
+  description: "Akşam yemeği planlamayı bir yük olmaktan çıkarıp eğlenceye dönüştürüyoruz. Bekleme listesine katıl, mutfaktaki değişimi ilk sen gör!",
 };
 
 export default function RootLayout({
