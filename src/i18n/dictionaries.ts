@@ -15,7 +15,8 @@ export const tr = {
             "Detaylı besin değerleri"
         ],
         emailPlaceholder: "E-posta adresiniz",
-        joinButton: "Bekleme Listesine Katıl — Erken Erişim",
+        joinButton: "Erken Erişim Kazan",
+        joinButtonLoading: "Kaydediliyor...",
         earlyAccessFree: "Erken erişim kullanıcılarına tamamen ücretsiz",
         secondaryCta: "Omnoo'nun farkı ne?",
         comingSoon: "Yakında",
@@ -48,6 +49,9 @@ export const tr = {
     success: {
         title: "Harika!",
         message: "Bekleme listesine eklendiniz. Yakında haberleşeceğiz!",
+    },
+    error: {
+        message: "Bir hata oluştu. Lütfen tekrar deneyin.",
     }
 };
 
@@ -66,7 +70,8 @@ export const en = {
             "Detailed nutritional info"
         ],
         emailPlaceholder: "your@email.com",
-        joinButton: "Join the Waitlist — Early Access",
+        joinButton: "Get Early Access",
+        joinButtonLoading: "Saving...",
         earlyAccessFree: "Completely free for early access users",
         secondaryCta: "What makes Omnoo different?",
         comingSoon: "Coming Soon",
@@ -99,6 +104,9 @@ export const en = {
     success: {
         title: "Awesome!",
         message: "You've been added to the waitlist. Talk soon!",
+    },
+    error: {
+        message: "An error occurred. Please try again.",
     }
 };
 

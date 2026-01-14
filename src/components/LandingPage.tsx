@@ -17,13 +17,36 @@ interface LandingPageProps {
 export const LandingPage = ({ dict, lang }: LandingPageProps) => {
     const [email, setEmail] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (email) {
-            setSubmitted(true);
-            // In a real app, send to API here
-            console.log('Registered:', email);
+        if (!email) return;
+
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitted(true);
+            } else {
+                setError(dict.error?.message || 'Bir hata oluştu. Lütfen tekrar deneyin.');
+            }
+        } catch {
+            setError(dict.error?.message || 'Bir hata oluştu. Lütfen tekrar deneyin.');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -83,8 +106,16 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                             required
                                             type="email"
                                             aria-label="Email address"
+                                            disabled={loading}
                                         />
-                                        <Button type="submit" fullWidth>{dict.hero.joinButton}</Button>
+                                        <Button type="submit" fullWidth disabled={loading}>
+                                            {loading ? dict.hero.joinButtonLoading : dict.hero.joinButton}
+                                        </Button>
+                                        {error && (
+                                            <p style={{ color: '#d32f2f', fontSize: '14px', marginTop: '8px', textAlign: 'center' }}>
+                                                {error}
+                                            </p>
+                                        )}
                                     </form>
                                 )}
 
