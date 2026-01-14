@@ -26,26 +26,31 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://omnoo.app"),
   title: "Omnoo ile Tanışın! 🥦 Mutfağın Yeni Neşesi",
   description: "Akşam yemeği planlamayı bir yük olmaktan çıkarıp eğlenceye dönüştürüyoruz. Bekleme listesine katıl, mutfaktaki değişimi ilk sen gör!",
   openGraph: {
     title: "Omnoo ile Tanışın! 🥦 Mutfağın Yeni Neşesi",
     description: "Akşam yemeği planlamayı bir yük olmaktan çıkarıp eğlenceye dönüştürüyoruz. Bekleme listesine katıl, mutfaktaki değişimi ilk sen gör!",
+    url: "https://omnoo.app",
+    siteName: "Omnoo",
     images: [
       {
-        url: "/OG.webp",
+        url: "/OG.png",
         width: 1200,
         height: 630,
         alt: "Omnoo - Mutfağın Yeni Neşesi",
+        type: "image/png",
       },
     ],
     type: "website",
+    locale: "tr_TR",
   },
   twitter: {
     card: "summary_large_image",
     title: "Omnoo ile Tanışın! 🥦 Mutfağın Yeni Neşesi",
     description: "Akşam yemeği planlamayı bir yük olmaktan çıkarıp eğlenceye dönüştürüyoruz.",
-    images: ["/OG.webp"],
+    images: ["/OG.png"],
   },
 };
 
