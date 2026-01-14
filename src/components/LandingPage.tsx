@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { motion, Variants } from 'framer-motion';
 import { Header } from '@/components/layout/Header';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
@@ -13,6 +14,43 @@ interface LandingPageProps {
     dict: Dictionary;
     lang: Lang;
 }
+
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.2,
+        },
+    },
+};
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut",
+        },
+    },
+};
+
+const imageVariants: Variants = {
+    hidden: { opacity: 0, x: 20, scale: 0.95 },
+    visible: {
+        opacity: 1,
+        x: 0,
+        scale: 1,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+            delay: 0.4,
+        },
+    },
+};
 
 export const LandingPage = ({ dict, lang }: LandingPageProps) => {
     const [email, setEmail] = useState('');
@@ -50,6 +88,9 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
         }
     };
 
+    // Determine hero image based on language
+    const heroImage = lang === 'en' ? '/landing-hero-en.webp' : '/landing-hero.webp';
+
     return (
         <div className={styles.container}>
             {/* Background Layer */}
@@ -73,17 +114,22 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                 <main className={styles.mainContent}>
                     <div className={styles.heroSection}>
                         {/* Left Column: Text Content */}
-                        <div className={styles.textContent}>
+                        <motion.div
+                            className={styles.textContent}
+                            variants={containerVariants}
+                            initial="hidden"
+                            animate="visible"
+                        >
                             {/* 1. Ana Başlık & Alt Başlık */}
-                            <h1 className={styles.headline}>
+                            <motion.h1 className={styles.headline} variants={itemVariants}>
                                 <span className={styles.headlineLight}>{dict.hero.titleStart}</span>
                                 <br />
                                 <span className={styles.headlineBold}>{dict.hero.titleEnd}</span>
-                            </h1>
-                            <p className={styles.subheadline}>{dict.hero.subtitle}</p>
+                            </motion.h1>
+                            <motion.p className={styles.subheadline} variants={itemVariants}>{dict.hero.subtitle}</motion.p>
 
                             {/* 2. E-posta Input & CTA Butonu */}
-                            <div className={styles.formContainer}>
+                            <motion.div className={styles.formContainer} variants={itemVariants}>
                                 {submitted ? (
                                     <div style={{ padding: '24px', background: 'rgba(230, 255, 250, 0.8)', border: '1px solid rgba(0, 150, 136, 0.2)', borderRadius: '12px', color: '#00695c' }}>
                                         <h3 style={{ marginBottom: '8px', fontFamily: 'var(--font-display)', fontWeight: 600 }}>{dict.success.title}</h3>
@@ -111,26 +157,38 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                     </form>
                                 )}
                                 <p className={styles.earlyAccessText}>{dict.hero.earlyAccessFree}</p>
-                            </div>
+                            </motion.div>
 
                             {/* Mobile App Preview - Moved above benefits for mobile */}
-                            <div className={styles.mobileAppPreview}>
+                            <motion.div className={styles.mobileAppPreview} variants={itemVariants}>
                                 <Image
-                                    src="/landing-hero.webp"
+                                    src={heroImage}
                                     alt="Omnoo Mobile App Preview"
                                     width={320}
                                     height={640}
                                     style={{ width: '100%', height: 'auto' }}
                                 />
-                            </div>
+                            </motion.div>
 
                             {/* Section Title - Mobile only */}
-                            <h2 className={styles.benefitsSectionTitle}>{dict.hero.secondaryCta}</h2>
+                            <motion.h2 className={styles.benefitsSectionTitle} variants={itemVariants}>
+                                {dict.hero.secondaryCta}
+                            </motion.h2>
 
                             {/* Benefits Grid (2x2 Cardlets) */}
-                            <div className={styles.benefitsGrid}>
+                            <motion.div
+                                className={styles.benefitsGrid}
+                                variants={containerVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-50px" }}
+                            >
                                 {dict.hero.benefits.map((benefit, index) => (
-                                    <div key={index} className={styles.benefitCard}>
+                                    <motion.div
+                                        key={index}
+                                        className={styles.benefitCard}
+                                        variants={itemVariants}
+                                    >
                                         <Image
                                             src={benefit.icon}
                                             alt=""
@@ -139,12 +197,12 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                             className={styles.benefitIcon}
                                         />
                                         <span className={styles.benefitText}>{benefit.text}</span>
-                                    </div>
+                                    </motion.div>
                                 ))}
-                            </div>
+                            </motion.div>
 
                             {/* Mobile Store Badges */}
-                            <div className={styles.mobileStoreBadges}>
+                            <motion.div className={styles.mobileStoreBadges} variants={itemVariants}>
                                 <div className={styles.storeBadge}>
                                     <svg className={styles.storeIcon} viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
@@ -163,7 +221,7 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                         <span className={styles.storeName}>{dict.hero.googlePlay}</span>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
 
                             {/* Mobile Footer CTA - Only visible on mobile */}
                             <div className={styles.mobileFooterCta}>
@@ -177,20 +235,25 @@ export const LandingPage = ({ dict, lang }: LandingPageProps) => {
                                     {dict.hero.mobileFooterCta}
                                 </button>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Right Column: Phone Mockup */}
                         <div className={styles.visualContent}>
-                            <div className={styles.appPreview}>
+                            <motion.div
+                                className={styles.appPreview}
+                                variants={imageVariants}
+                                initial="hidden"
+                                animate="visible"
+                            >
                                 <Image
-                                    src="/landing-hero.webp"
+                                    src={heroImage}
                                     alt="Omnoo Mobile App Preview"
                                     width={500}
                                     height={1000}
                                     style={{ width: '100%', height: 'auto' }}
                                     priority
                                 />
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </main>

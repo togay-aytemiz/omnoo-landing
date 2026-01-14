@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import styles from './Header.module.css';
 import { Lang } from '@/i18n/types';
 
@@ -30,7 +31,12 @@ export const Header = ({ lang }: HeaderProps) => {
     const comingSoonText = lang === 'tr' ? 'YAKINDA' : 'COMING SOON';
 
     return (
-        <header className={styles.header}>
+        <motion.header
+            className={styles.header}
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
             <div className={styles.logo}>Omnoo</div>
 
             {/* Right side: Store Badges + Lang Switch (desktop only for badges) */}
@@ -56,6 +62,6 @@ export const Header = ({ lang }: HeaderProps) => {
                     {label}
                 </Link>
             </div>
-        </header>
+        </motion.header>
     );
 };

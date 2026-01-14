@@ -62,8 +62,8 @@ export const en = {
         waitlist: "Join Waitlist",
     },
     hero: {
-        titleStart: "The Most Efficient Way to",
-        titleEnd: "Plan Weekly Meals with AI",
+        titleStart: "Smarter Meal Planning",
+        titleEnd: "with AI",
         subtitle: "Smart menus tailored to your taste, office and gym routine.",
         benefits: [
             { text: "Fully personalized modern recipes", icon: "/1.webp" },
