@@ -28,6 +28,25 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Omnoo ile Tanışın! 🥦 Mutfağın Yeni Neşesi",
   description: "Akşam yemeği planlamayı bir yük olmaktan çıkarıp eğlenceye dönüştürüyoruz. Bekleme listesine katıl, mutfaktaki değişimi ilk sen gör!",
+  openGraph: {
+    title: "Omnoo ile Tanışın! 🥦 Mutfağın Yeni Neşesi",
+    description: "Akşam yemeği planlamayı bir yük olmaktan çıkarıp eğlenceye dönüştürüyoruz. Bekleme listesine katıl, mutfaktaki değişimi ilk sen gör!",
+    images: [
+      {
+        url: "/OG.webp",
+        width: 1200,
+        height: 630,
+        alt: "Omnoo - Mutfağın Yeni Neşesi",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Omnoo ile Tanışın! 🥦 Mutfağın Yeni Neşesi",
+    description: "Akşam yemeği planlamayı bir yük olmaktan çıkarıp eğlenceye dönüştürüyoruz.",
+    images: ["/OG.webp"],
+  },
 };
 
 export default function RootLayout({
